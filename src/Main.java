@@ -2,7 +2,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+// import と classの間で1行あけること
 public class Main {
+// classとmainメソッドの間で1行あけること
     public static void main(String[] args){
         List<String> pokemonParty = new ArrayList<>();
         pokemonParty.add("Sprigatito");
@@ -24,7 +26,6 @@ public class Main {
         pokemonInfo.put("Bulbasaur", "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.");
         pokemonInfo.put("Charmander","It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.");
         pokemonInfo.put("Squirtle","When it retracts its long neck into its shell, it squirts out water with vigorous force.");
-
         pokemonInfo.entrySet().stream()
                 .map(pokemon -> pokemon.getKey() + ":" + pokemon.getValue())
                 .forEach(System.out::println);
@@ -32,6 +33,5 @@ public class Main {
         pokemonInfo.entrySet().stream()
                 .map(pokemon -> pokemon.getValue().replace(pokemon.getValue(),"No information is availiable at this time"))
                 .forEach(System.out::println);
-
     }
 }
